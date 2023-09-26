@@ -2,9 +2,11 @@ from rest_framework import generics
 from .models import Advert
 from .serializers import AdvertSerializer
 
+
 class AdvertList(generics.ListCreateAPIView):
     queryset = Advert.objects.all()
     serializer_class = AdvertSerializer
+
 
 class AdvertDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Advert.objects.all()
